@@ -1,6 +1,6 @@
 <h1 align="center">🎨 Color</h1>
 
-<p align="center>
+<p align="center">
     <a href="https://travis-ci.com/pegasus-toolset/color"><img src="https://travis-ci.com/pegasus-toolset/color.svg?branch=main" /></a>
 </p>
 
