@@ -2,9 +2,9 @@ package color
 
 import "testing"
 
-func TestRGBToRGBAAliceBlue(t *testing.T) {
-	rgb := RGB{0xf0, 0xf8, 0xff}
-	r, g, b, a := rgb.RGBA()
+func TestRGB48ToRGBAAliceBlue(t *testing.T) {
+	rgb48 := RGB48{0xf000, 0xf800, 0xff00}
+	r, g, b, a := rgb48.RGBA()
 
 	if r != 0xf000 {
 		t.Errorf("Red component was incorrect, got: 0x%x, want 0x%x.", r, 0xf000)
