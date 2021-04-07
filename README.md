@@ -1,7 +1,7 @@
 <h1 align="center">🎨 Color</h1>
 
 <p align="center>
-[![Build Status](https://travis-ci.com/pegasus-toolset/color.svg?branch=main)](https://travis-ci.com/pegasus-toolset/color)
+    <a href="https://travis-ci.com/pegasus-toolset/color"><img src="https://travis-ci.com/pegasus-toolset/color.svg?branch=main" /></a>
 </p>
 
 **Color** is an extension of the standard library package
