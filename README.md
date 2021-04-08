@@ -13,4 +13,5 @@
 - 24-bit RGB colors
 - 48-bit RGB colors
 - HSL colors
+- HSV colors
 - X11 color names
