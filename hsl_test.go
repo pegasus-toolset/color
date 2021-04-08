@@ -12,7 +12,7 @@ func TestHSLToRGBAWhite(t *testing.T) {
 
 func TestHSLToRGBAWebGray(t *testing.T) {
 	hsl := HSL{0, 0, 0.5}
-	testHSLToRGBA(t, hsl, 0x8080, 0x8080, 0x8080, 0xffff, 0xff)
+	testHSLToRGBA(t, hsl, 0x8080, 0x8080, 0x8080, 0xffff, 0x120)
 }
 
 func TestHSLToRGBABlack(t *testing.T) {
@@ -27,12 +27,17 @@ func TestHSLToRGBARed(t *testing.T) {
 
 func TestHSLToRGBAWebGreen(t *testing.T) {
 	hsl := HSL{120, 1, 0.25}
-	testHSLToRGBA(t, hsl, 0x0, 0x8080, 0x0, 0xffff, 0xff)
+	testHSLToRGBA(t, hsl, 0x0, 0x8080, 0x0, 0xffff, 0x120)
 }
 
 func TestHSLToRGBAAliceBlue(t *testing.T) {
 	hsl := HSL{208, 1, 0.97}
-	testHSLToRGBA(t, hsl, 0xf0f0, 0xf8f8, 0xffff, 0xffff, 0xff)
+	testHSLToRGBA(t, hsl, 0xf0f0, 0xf8f8, 0xffff, 0xffff, 0x120)
+}
+
+func TestHSLToRGBABlueViolet(t *testing.T) {
+	hsl := HSL{271, 0.76, 0.53}
+	testHSLToRGBA(t, hsl, 0x8a8a, 0x2b2b, 0xe2e2, 0xffff, 0x120)
 }
 
 func TestRGBAToHSLWhite(t *testing.T) {
