@@ -2,7 +2,7 @@
 
 <p align="center">
     <a href="https://travis-ci.com/pegasus-toolset/color"><img src="https://travis-ci.com/pegasus-toolset/color.svg?branch=main" /></a>
-    <a href="https://app.codecov.io/gh/pegasus-toolset/color"><img src="https://codecov.io/gh/pegasus-toolset/color/branch/master/graph/badge.svg?token=3R6863F2HA" /></a>
+    <a href="https://app.codecov.io/gh/pegasus-toolset/color"><img src="https://codecov.io/gh/pegasus-toolset/color/branch/main/graph/badge.svg?token=3R6863F2HA" /></a>
 </p>
 
 **Color** is an extension of the standard library package
