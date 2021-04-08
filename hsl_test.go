@@ -40,12 +40,12 @@ func TestHSLToRGBABlueViolet(t *testing.T) {
 	testHSLToRGBA(t, hsl, 0x8a8a, 0x2b2b, 0xe2e2, 0xffff, 0x120)
 }
 
-func TestHSLToRGBCrimson(t *testing.T) {
+func TestHSLToRGBACrimson(t *testing.T) {
 	hsl := HSL{348, 0.83, 0.47}
 	testHSLToRGBA(t, hsl, 0xdcdc, 0x1414, 0x3c3c, 0xffff, 0x120)
 }
 
-func TestHSLToRGBBeige(t *testing.T) {
+func TestHSLToRGBABeige(t *testing.T) {
 	hsl := HSL{60, 0.56, 0.91}
 	testHSLToRGBA(t, hsl, 0xf5f5, 0xf5f5, 0xdcdc, 0xffff, 0x120)
 }
