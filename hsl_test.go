@@ -45,6 +45,11 @@ func TestHSLToRGBCrimson(t *testing.T) {
 	testHSLToRGBA(t, hsl, 0xdcdc, 0x1414, 0x3c3c, 0xffff, 0x120)
 }
 
+func TestHSLToRGBBeige(t *testing.T) {
+	hsl := HSL{60, 0.56, 0.91}
+	testHSLToRGBA(t, hsl, 0xf5f5, 0xf5f5, 0xdcdc, 0xffff, 0x120)
+}
+
 func TestRGBAToHSLWhite(t *testing.T) {
 	rgba := color.RGBA{0xff, 0xff, 0xff, 0xff}
 	hsl := HSLModel.Convert(rgba)
