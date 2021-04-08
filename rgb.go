@@ -7,7 +7,14 @@ type RGB struct {
 }
 
 func (rgb RGB) RGBA() (r, g, b, a uint32) {
-	return uint32(rgb.R) << 8, uint32(rgb.G) << 8, uint32(rgb.B) << 8, 0xffff
+	r = uint32(rgb.R)
+	r |= r << 8
+	g = uint32(rgb.G)
+	g |= g << 8
+	b = uint32(rgb.B)
+	b |= b << 8
+	a = 0xffff
+	return
 }
 
 var RGBModel color.Model = color.ModelFunc(rgbModel)
