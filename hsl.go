@@ -5,6 +5,7 @@ import (
 	"math"
 )
 
+// HSL color space
 type HSL struct {
 	H, S, L float64
 }

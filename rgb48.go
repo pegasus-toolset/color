@@ -2,6 +2,7 @@ package color
 
 import "image/color"
 
+// sRGB color space (48-bit)
 type RGB48 struct {
 	R, G, B uint16
 }

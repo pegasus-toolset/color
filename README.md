@@ -15,5 +15,6 @@
 - HSI colors
 - HSL colors
 - HSV colors
+- L\*a\*b\* colors
 - XYZ colors
 - X11 color names
