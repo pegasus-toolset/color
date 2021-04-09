@@ -107,8 +107,8 @@ func testHSLToRGBA(t *testing.T, hsl HSL, rExp, gExp, bExp, aExp, tolerance int6
 }
 
 func testRGBAToHSL(t *testing.T, hsl HSL, hExp, sExp, lExp, tolerance float64) {
-	if hsl.H < hExp-tolerance || hsl.H > hExp+tolerance {
-		t.Errorf("Hue component was incorrect, got: %f, want %f±%f.", hsl.H, hExp, tolerance)
+	if hsl.H < hExp-tolerance*100 || hsl.H > hExp+tolerance*100 {
+		t.Errorf("Hue component was incorrect, got: %f, want %f±%f.", hsl.H, hExp, tolerance*100)
 	}
 
 	if hsl.S < sExp-tolerance || hsl.S > sExp+tolerance {

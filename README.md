@@ -12,6 +12,7 @@
 
 - 24-bit RGB colors
 - 48-bit RGB colors
+- HSI colors
 - HSL colors
 - HSV colors
 - XYZ colors
