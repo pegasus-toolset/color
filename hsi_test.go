@@ -31,17 +31,17 @@ func TestHISToRGBAWebGreen(t *testing.T) {
 }
 
 func TestHSIToRGBAAliceBlue(t *testing.T) {
-	hsi := HSI{207.8, 0.031, 0.9712}
+	hsi := HSI{208, 0.031, 0.9712}
 	testHSIToRGBA(t, hsi, 0xf0f0, 0xf8f8, 0xffff, 0xffff, 0x120)
 }
 
 func TestHSIToRGBABlueViolet(t *testing.T) {
-	hsi := HSI{271.27, 0.6831, 0.532}
+	hsi := HSI{271.15, 0.6830, 0.532}
 	testHSIToRGBA(t, hsi, 0x8a8a, 0x2b2b, 0xe2e2, 0xffff, 0x120)
 }
 
 func TestHSIToRGBACrimson(t *testing.T) {
-	hsi := HSI{349.11, 0.8, 0.3922}
+	hsi := HSI{348, 0.8, 0.3922}
 	testHSIToRGBA(t, hsi, 0xdcdc, 0x1414, 0x3c3c, 0xffff, 0x120)
 }
 
@@ -83,7 +83,7 @@ func TestRGBAToHSIWebGreen(t *testing.T) {
 func TestRGBAToHSIAliceBlue(t *testing.T) {
 	rgba := color.RGBA{0xf0, 0xf8, 0xff, 0xff}
 	hsi := HSIModel.Convert(rgba)
-	testRGBAToHSI(t, hsi.(HSI), 207.8, 0.031, 0.9712, 0.002)
+	testRGBAToHSI(t, hsi.(HSI), 208, 0.031, 0.9712, 0.002)
 }
 
 func testHSIToRGBA(t *testing.T, hsi HSI, rExp, gExp, bExp, aExp, tolerance int64) {
