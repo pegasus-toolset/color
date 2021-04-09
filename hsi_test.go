@@ -35,6 +35,21 @@ func TestHSIToRGBAAliceBlue(t *testing.T) {
 	testHSIToRGBA(t, hsi, 0xf0f0, 0xf8f8, 0xffff, 0xffff, 0x120)
 }
 
+func TestHSIToRGBABlueViolet(t *testing.T) {
+	hsi := HSI{271.27, 0.6831, 0.532}
+	testHSIToRGBA(t, hsi, 0x8a8a, 0x2b2b, 0xe2e2, 0xffff, 0x120)
+}
+
+func TestHSIToRGBACrimson(t *testing.T) {
+	hsi := HSI{349.11, 0.8, 0.3922}
+	testHSIToRGBA(t, hsi, 0xdcdc, 0x1414, 0x3c3c, 0xffff, 0x120)
+}
+
+func TestHSIToRGBABeige(t *testing.T) {
+	hsi := HSI{60, 0.0704, 0.9281}
+	testHSIToRGBA(t, hsi, 0xf5f5, 0xf5f5, 0xdcdc, 0xffff, 0x120)
+}
+
 func TestRGBAToHSIWhite(t *testing.T) {
 	rgba := color.RGBA{0xff, 0xff, 0xff, 0xff}
 	hsi := HSIModel.Convert(rgba)
