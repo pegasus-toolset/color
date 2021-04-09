@@ -5,6 +5,7 @@ import (
 	"math"
 )
 
+// XYZ color space (D65)
 type XYZ struct {
 	X, Y, Z float64
 }

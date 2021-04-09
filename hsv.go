@@ -5,6 +5,7 @@ import (
 	"math"
 )
 
+// HSV color space
 type HSV struct {
 	H, S, V float64
 }

@@ -5,6 +5,7 @@ import (
 	"math"
 )
 
+// HSI color space
 type HSI struct {
 	H, S, I float64
 }
