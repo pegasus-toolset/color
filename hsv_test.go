@@ -25,7 +25,7 @@ func TestHSVToRGBARed(t *testing.T) {
 	testHSVToRGBA(t, hsv, 0xffff, 0x0, 0x0, 0xffff, 0)
 }
 
-func TestHSVToWebGreen(t *testing.T) {
+func TestHSVToRGBAWebGreen(t *testing.T) {
 	hsv := HSV{120, 1, 0.5}
 	testHSVToRGBA(t, hsv, 0x0, 0x8080, 0x0, 0xffff, 0x120)
 }
@@ -107,8 +107,8 @@ func testHSVToRGBA(t *testing.T, hsv HSV, rExp, gExp, bExp, aExp, tolerance int6
 }
 
 func testRGBAToHSV(t *testing.T, hsv HSV, hExp, sExp, vExp, tolerance float64) {
-	if hsv.H < hExp-tolerance || hsv.H > hExp+tolerance {
-		t.Errorf("Hue component was incorrect; got: %f, want %f±%f.", hsv.H, hExp, tolerance)
+	if hsv.H < hExp-tolerance*100 || hsv.H > hExp+tolerance*100 {
+		t.Errorf("Hue component was incorrect; got: %f, want %f±%f.", hsv.H, hExp, tolerance*100)
 	}
 
 	if hsv.S < sExp-tolerance || hsv.S > sExp+tolerance {
