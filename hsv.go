@@ -45,6 +45,11 @@ func (hsv HSV) RGBA() (r, g, b, a uint32) {
 	return uint32((rFloat + m) * 0xffff), uint32((gFloat + m) * 0xffff), uint32((bFloat + m) * 0xffff), 0xffff
 }
 
+func (hsv HSV) DistanceTo(c color.Color) float64 {
+	other := HSVModel.Convert(c).(HSV)
+	return math.Sqrt(math.Pow(other.H/360-hsv.H/360, 2) + math.Pow(other.S-hsv.S, 2) + math.Pow(other.V-hsv.V, 2))
+}
+
 var HSVModel color.Model = color.ModelFunc(hsvModel)
 
 func hsvModel(c color.Color) color.Color {

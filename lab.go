@@ -37,6 +37,11 @@ func (lab Lab) RGBA() (r, g, b, a uint32) {
 	return xyz.RGBA()
 }
 
+func (lab Lab) DistanceTo(c color.Color) float64 {
+	other := LabModel.Convert(c).(Lab)
+	return math.Sqrt(math.Pow(other.L-lab.L, 2) + math.Pow(other.A-lab.A, 2) + math.Pow(other.B-lab.B, 2))
+}
+
 var LabModel color.Model = color.ModelFunc(labModel)
 
 func labModel(c color.Color) color.Color {

@@ -7,47 +7,61 @@ import (
 
 func TestHSLToRGBAWhite(t *testing.T) {
 	hsl := HSL{0, 0, 1}
-	testHSLToRGBA(t, hsl, 0xffff, 0xffff, 0xffff, 0xffff, 0)
+	testRGBA(t, hsl, 0xffff, 0xffff, 0xffff, 0xffff, 0)
 }
 
 func TestHSLToRGBAWebGray(t *testing.T) {
 	hsl := HSL{0, 0, 0.5}
-	testHSLToRGBA(t, hsl, 0x8080, 0x8080, 0x8080, 0xffff, 0x120)
+	testRGBA(t, hsl, 0x8080, 0x8080, 0x8080, 0xffff, 0x120)
 }
 
 func TestHSLToRGBABlack(t *testing.T) {
 	hsl := HSL{0, 0, 0}
-	testHSLToRGBA(t, hsl, 0x0, 0x0, 0x0, 0xffff, 0)
+	testRGBA(t, hsl, 0x0, 0x0, 0x0, 0xffff, 0)
 }
 
 func TestHSLToRGBARed(t *testing.T) {
 	hsl := HSL{0, 1, 0.5}
-	testHSLToRGBA(t, hsl, 0xffff, 0x0, 0x0, 0xffff, 0)
+	testRGBA(t, hsl, 0xffff, 0x0, 0x0, 0xffff, 0)
 }
 
 func TestHSLToRGBAWebGreen(t *testing.T) {
 	hsl := HSL{120, 1, 0.25}
-	testHSLToRGBA(t, hsl, 0x0, 0x8080, 0x0, 0xffff, 0x120)
+	testRGBA(t, hsl, 0x0, 0x8080, 0x0, 0xffff, 0x120)
 }
 
 func TestHSLToRGBAAliceBlue(t *testing.T) {
 	hsl := HSL{208, 1, 0.97}
-	testHSLToRGBA(t, hsl, 0xf0f0, 0xf8f8, 0xffff, 0xffff, 0x120)
+	testRGBA(t, hsl, 0xf0f0, 0xf8f8, 0xffff, 0xffff, 0x120)
 }
 
 func TestHSLToRGBABlueViolet(t *testing.T) {
 	hsl := HSL{271, 0.76, 0.53}
-	testHSLToRGBA(t, hsl, 0x8a8a, 0x2b2b, 0xe2e2, 0xffff, 0x120)
+	testRGBA(t, hsl, 0x8a8a, 0x2b2b, 0xe2e2, 0xffff, 0x120)
 }
 
 func TestHSLToRGBACrimson(t *testing.T) {
 	hsl := HSL{348, 0.83, 0.47}
-	testHSLToRGBA(t, hsl, 0xdcdc, 0x1414, 0x3c3c, 0xffff, 0x120)
+	testRGBA(t, hsl, 0xdcdc, 0x1414, 0x3c3c, 0xffff, 0x120)
 }
 
 func TestHSLToRGBABeige(t *testing.T) {
 	hsl := HSL{60, 0.56, 0.91}
-	testHSLToRGBA(t, hsl, 0xf5f5, 0xf5f5, 0xdcdc, 0xffff, 0x120)
+	testRGBA(t, hsl, 0xf5f5, 0xf5f5, 0xdcdc, 0xffff, 0x120)
+}
+
+func TestHSLDistanceFromBlackToWhite(t *testing.T) {
+	black := HSL{0, 0, 0}
+	white := HSL{0, 0, 1}
+
+	testDistanceTo(t, black, white, 1, 0)
+}
+
+func TestHSLDistanceFromRedToWebGreen(t *testing.T) {
+	red := HSL{0, 1, 0.5}
+	webGreen := HSL{120, 1, 0.25}
+
+	testDistanceTo(t, red, webGreen, 0.4167, 0.0001)
 }
 
 func TestRGBAToHSLWhite(t *testing.T) {
@@ -84,26 +98,6 @@ func TestRGBAToHSLAliceBlue(t *testing.T) {
 	rgba := color.RGBA{0xf0, 0xf8, 0xff, 0xff}
 	hsl := HSLModel.Convert(rgba)
 	testRGBAToHSL(t, hsl.(HSL), 208, 1, 0.97, 0.002)
-}
-
-func testHSLToRGBA(t *testing.T, hsl HSL, rExp, gExp, bExp, aExp, tolerance int64) {
-	r, g, b, a := hsl.RGBA()
-
-	if int64(r) < rExp-tolerance || int64(r) > rExp+tolerance {
-		t.Errorf("Red component was incorrect, got: 0x%x, want 0x%x±%d.", r, rExp, tolerance)
-	}
-
-	if int64(g) < gExp-tolerance || int64(g) > gExp+tolerance {
-		t.Errorf("Green component was incorrect, got: 0x%x, want 0x%x±%d.", g, gExp, tolerance)
-	}
-
-	if int64(b) < bExp-tolerance || int64(b) > bExp+tolerance {
-		t.Errorf("Blue component was incorrect, got: 0x%x, want 0x%x±%d.", b, bExp, tolerance)
-	}
-
-	if int64(a) != aExp {
-		t.Errorf("Alpha component was incorrect, got: 0x%x, want 0x%x.", a, aExp)
-	}
 }
 
 func testRGBAToHSL(t *testing.T, hsl HSL, hExp, sExp, lExp, tolerance float64) {

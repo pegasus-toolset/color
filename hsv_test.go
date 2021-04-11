@@ -7,47 +7,61 @@ import (
 
 func TestHSVToRGBAWhite(t *testing.T) {
 	hsv := HSV{0, 0, 1}
-	testHSVToRGBA(t, hsv, 0xffff, 0xffff, 0xffff, 0xffff, 0)
+	testRGBA(t, hsv, 0xffff, 0xffff, 0xffff, 0xffff, 0)
 }
 
 func TestHSVToRGBAWebGray(t *testing.T) {
 	hsv := HSV{0, 0, 0.5}
-	testHSVToRGBA(t, hsv, 0x8080, 0x8080, 0x8080, 0xffff, 0x120)
+	testRGBA(t, hsv, 0x8080, 0x8080, 0x8080, 0xffff, 0x120)
 }
 
 func TestHSVToRGBABlack(t *testing.T) {
 	hsv := HSV{0, 0, 0}
-	testHSVToRGBA(t, hsv, 0x0, 0x0, 0x0, 0xffff, 0)
+	testRGBA(t, hsv, 0x0, 0x0, 0x0, 0xffff, 0)
 }
 
 func TestHSVToRGBARed(t *testing.T) {
 	hsv := HSV{0, 1, 1}
-	testHSVToRGBA(t, hsv, 0xffff, 0x0, 0x0, 0xffff, 0)
+	testRGBA(t, hsv, 0xffff, 0x0, 0x0, 0xffff, 0)
 }
 
 func TestHSVToRGBAWebGreen(t *testing.T) {
 	hsv := HSV{120, 1, 0.5}
-	testHSVToRGBA(t, hsv, 0x0, 0x8080, 0x0, 0xffff, 0x120)
+	testRGBA(t, hsv, 0x0, 0x8080, 0x0, 0xffff, 0x120)
 }
 
 func TestHSVToRGBAAliceBlue(t *testing.T) {
 	hsv := HSV{208, 0.06, 1}
-	testHSVToRGBA(t, hsv, 0xf0f0, 0xf8f8, 0xffff, 0xffff, 0x120)
+	testRGBA(t, hsv, 0xf0f0, 0xf8f8, 0xffff, 0xffff, 0x120)
 }
 
 func TestHSVToRGBABlueViolet(t *testing.T) {
 	hsv := HSV{271, 0.81, 0.89}
-	testHSVToRGBA(t, hsv, 0x8a8a, 0x2b2b, 0xe2e2, 0xffff, 0x120)
+	testRGBA(t, hsv, 0x8a8a, 0x2b2b, 0xe2e2, 0xffff, 0x120)
 }
 
 func TestHSVToRGBACrimson(t *testing.T) {
 	hsv := HSV{348, 0.91, 0.86}
-	testHSVToRGBA(t, hsv, 0xdcdc, 0x1414, 0x3c3c, 0xffff, 0x120)
+	testRGBA(t, hsv, 0xdcdc, 0x1414, 0x3c3c, 0xffff, 0x120)
 }
 
 func TestHSVToRGBABeige(t *testing.T) {
 	hsv := HSV{60, 0.1, 0.96}
-	testHSVToRGBA(t, hsv, 0xf5f5, 0xf5f5, 0xdcdc, 0xffff, 0x120)
+	testRGBA(t, hsv, 0xf5f5, 0xf5f5, 0xdcdc, 0xffff, 0x120)
+}
+
+func TestHSVDistanceFromBlackToWhite(t *testing.T) {
+	black := HSV{0, 0, 0}
+	white := HSV{0, 0, 1}
+
+	testDistanceTo(t, black, white, 1, 0)
+}
+
+func TestHSVDistanceFromRedToWebGreen(t *testing.T) {
+	red := HSV{0, 1, 1}
+	webGreen := HSV{120, 1, 0.5}
+
+	testDistanceTo(t, red, webGreen, 0.6009, 0.0001)
 }
 
 func TestRGBAToHSVWhite(t *testing.T) {
@@ -84,26 +98,6 @@ func TestRGBAToHSVAliceBlue(t *testing.T) {
 	rgba := color.RGBA{0xf0, 0xf8, 0xff, 0xff}
 	hsv := HSVModel.Convert(rgba)
 	testRGBAToHSV(t, hsv.(HSV), 208, 0.06, 1, 0.002)
-}
-
-func testHSVToRGBA(t *testing.T, hsv HSV, rExp, gExp, bExp, aExp, tolerance int64) {
-	r, g, b, a := hsv.RGBA()
-
-	if int64(r) < rExp-tolerance || int64(r) > rExp+tolerance {
-		t.Errorf("Red component was incorrect, got: 0x%x, want 0x%x±%d.", r, rExp, tolerance)
-	}
-
-	if int64(g) < gExp-tolerance || int64(g) > gExp+tolerance {
-		t.Errorf("Green component was incorrect, got: 0x%x, want 0x%x±%d.", g, gExp, tolerance)
-	}
-
-	if int64(b) < bExp-tolerance || int64(b) > bExp+tolerance {
-		t.Errorf("Blue component was incorrect, got: 0x%x, want 0x%x±%d.", b, bExp, tolerance)
-	}
-
-	if int64(a) != aExp {
-		t.Errorf("Alpha component was incorrect, got: 0x%x, want 0x%x.", a, aExp)
-	}
 }
 
 func testRGBAToHSV(t *testing.T, hsv HSV, hExp, sExp, vExp, tolerance float64) {
