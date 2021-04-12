@@ -1,6 +1,9 @@
 package color
 
-import "image/color"
+import (
+	"image/color"
+	"math"
+)
 
 // sRGB color space (24-bit)
 type RGB struct {
@@ -16,6 +19,11 @@ func (rgb RGB) RGBA() (r, g, b, a uint32) {
 	b |= b << 8
 	a = 0xffff
 	return
+}
+
+func (rgb RGB) DistanceTo(c color.Color) float64 {
+	other := RGBModel.Convert(c).(RGB)
+	return math.Sqrt(math.Pow(float64(other.R)-float64(rgb.R), 2) + math.Pow(float64(other.G)-float64(rgb.G), 2) + math.Pow(float64(other.B)-float64(rgb.B), 2))
 }
 
 var RGBModel color.Model = color.ModelFunc(rgbModel)
