@@ -36,17 +36,32 @@ func TestRGBDistanceFromRedToWebGreen(t *testing.T) {
 
 func TestRGBAToRGBAliceBlue(t *testing.T) {
 	rgba := color.RGBA{0xf0, 0xf8, 0xff, 0xff}
-	rgb := RGBModel.Convert(rgba).(RGB)
+	rgb := RGBModel.Convert(rgba)
+	testRGBAToRGB(t, rgb.(RGB), 0xf0, 0xf8, 0xff)
+}
 
-	if rgb.R != 0xf0 {
-		t.Errorf("Red component was incorrect, got 0x%x, want 0x%x.", rgb.R, 0xf0)
+func TestRGBAToRGBRed(t *testing.T) {
+	rgba := color.RGBA{0xff, 0x0, 0x0, 0xff}
+	rgb := RGBModel.Convert(rgba)
+	testRGBAToRGB(t, rgb.(RGB), 0xff, 0x0, 0x0)
+}
+
+func TestRGBAToRGBWebGreen(t *testing.T) {
+	rgba := color.RGBA{0x0, 0x80, 0x0, 0xff}
+	rgb := RGBModel.Convert(rgba)
+	testRGBAToRGB(t, rgb.(RGB), 0x0, 0x80, 0x0)
+}
+
+func testRGBAToRGB(t *testing.T, rgb RGB, rExp, gExp, bExp uint8) {
+	if rgb.R != rExp {
+		t.Errorf("Red component was incorrect, got 0x%x, want 0x%x.", rgb.R, rExp)
 	}
 
-	if rgb.G != 0xf8 {
-		t.Errorf("Green component was incorrect, got: 0x%x, want 0x%x.", rgb.G, 0xf8)
+	if rgb.G != gExp {
+		t.Errorf("Green component was incorrect, got: 0x%x, want 0x%x.", rgb.G, gExp)
 	}
 
-	if rgb.B != 0xff {
-		t.Errorf("Blue component was incorrect, got 0x%x, want 0x%x.", rgb.B, 0xff)
+	if rgb.B != bExp {
+		t.Errorf("Blue component was incorrect, got 0x%x, want 0x%x.", rgb.B, bExp)
 	}
 }

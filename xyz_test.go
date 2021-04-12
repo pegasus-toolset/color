@@ -35,6 +35,20 @@ func TestXYZToRGBAAliceBlue(t *testing.T) {
 	testRGBA(t, xyz, 0xf0f0, 0xf8f8, 0xffff, 0xffff, 0x120)
 }
 
+func TestXYZDistanceFromBlackToWhite(t *testing.T) {
+	black := XYZ{0, 0, 0}
+	white := XYZ{0.9505, 1, 1.089}
+
+	testDistanceTo(t, black, white, 1.7577, 0.0001)
+}
+
+func TestXYZDistanceFromRedToWebGreen(t *testing.T) {
+	red := XYZ{0.4124, 0.2126, 0.0193}
+	webGreen := XYZ{0.0772, 0.1544, 0.0257}
+
+	testDistanceTo(t, red, webGreen, 0.3403, 0.0001)
+}
+
 func TestRGBAToXYZWhite(t *testing.T) {
 	rgba := color.RGBA{0xff, 0xff, 0xff, 0xff}
 	xyz := XYZModel.Convert(rgba)

@@ -10,6 +10,20 @@ func TestRGB48ToRGBAAliceBlue(t *testing.T) {
 	testRGBA(t, rgb48, 0xf0f0, 0xf8f8, 0xffff, 0xffff, 0)
 }
 
+func TestRGB48DistanceFromBlackToWhite(t *testing.T) {
+	black := RGB48{0x0, 0x0, 0x0}
+	white := RGB48{0xffff, 0xffff, 0xffff}
+
+	testDistanceTo(t, black, white, 113509.9497, 0.0001)
+}
+
+func TestRGB48DistanceFromRedToWebGreen(t *testing.T) {
+	red := RGB48{0xffff, 0x0, 0x0}
+	webGreen := RGB48{0x0, 0x8080, 0x0}
+
+	testDistanceTo(t, red, webGreen, 73327.9145, 0.0001)
+}
+
 func TestRGBAToRGB48AliceBlue(t *testing.T) {
 	rgba := color.RGBA{0xf0, 0xf8, 0xff, 0xff}
 	rgb48 := RGB48Model.Convert(rgba).(RGB48)
