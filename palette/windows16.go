@@ -3,7 +3,7 @@ package palette
 import "github.com/pegasus-toolset/color"
 
 // Windows16 represents the Microsoft Windows default 16-color palette.
-var Windows16 = []color.Color{
+var Windows16 = color.Palette{
 	// Black
 	color.RGB{R: 0x0, G: 0x0, B: 0x0},
 	// Maroon

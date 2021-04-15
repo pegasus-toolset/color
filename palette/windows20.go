@@ -3,7 +3,7 @@ package palette
 import "github.com/pegasus-toolset/color"
 
 // Windows20 represents the Microsoft Windows default 20-color palette.
-var Windows20 = []color.Color{
+var Windows20 = color.Palette{
 	// Black
 	color.RGB{R: 0x0, G: 0x0, B: 0x0},
 	// Dark Red
