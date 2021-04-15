@@ -1,0 +1,39 @@
+package palette
+
+import "github.com/pegasus-toolset/color"
+
+// RISC represents the RISC OS default palette.
+var RISC = color.Palette{
+	// White
+	color.RGB{R: 0xff, G: 0xff, B: 0xff},
+	// Grey #1
+	color.RGB{R: 0xdd, G: 0xdd, B: 0xdd},
+	// Grey #2
+	color.RGB{R: 0xbb, G: 0xbb, B: 0xbb},
+	// Grey #3
+	color.RGB{R: 0x99, G: 0x99, B: 0x99},
+	// Grey #4
+	color.RGB{R: 0x77, G: 0x77, B: 0x77},
+	// Grey #5
+	color.RGB{R: 0x55, G: 0x55, B: 0x55},
+	// Grey #6
+	color.RGB{R: 0x33, G: 0x33, B: 0x33},
+	// Black
+	color.RGB{R: 0x0, G: 0x0, B: 0x0},
+	// Dark Blue
+	color.RGB{R: 0x0, G: 0x44, B: 0x99},
+	// Yellow
+	color.RGB{R: 0xee, G: 0xee, B: 0x0},
+	// Green
+	color.RGB{R: 0x0, G: 0xcc, B: 0x0},
+	// Red
+	color.RGB{R: 0xdd, G: 0x0, B: 0x0},
+	// Beige
+	color.RGB{R: 0xee, G: 0xee, B: 0xbb},
+	// Dark Green
+	color.RGB{R: 0x55, G: 0x88, B: 0x0},
+	// Orange
+	color.RGB{R: 0xff, G: 0xbb, B: 0x0},
+	// Light Blue
+	color.RGB{R: 0x0, G: 0xbb, B: 0xff},
+}

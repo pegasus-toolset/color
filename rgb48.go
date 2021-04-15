@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-// sRGB color space (48-bit)
+// RGB48 represents a color in the sRGB color space (48-bit).
 type RGB48 struct {
 	R, G, B uint16
 }

@@ -1,3 +1,4 @@
+// Package color is an extension of the standard library package image/color.
 package color
 
 import "image/color"

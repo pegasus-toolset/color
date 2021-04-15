@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-// sRGB color space (24-bit)
+// RGB represents a color in the sRGB color space (24-bit).
 type RGB struct {
 	R, G, B uint8
 }
