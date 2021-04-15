@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-// CIELAB color space (D65)
+// Lab represents a color in the CIELAB color space (D65).
 type Lab struct {
 	L, A, B float64
 }
