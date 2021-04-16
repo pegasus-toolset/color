@@ -1,0 +1,15 @@
+package palette
+
+import "github.com/pegasus-toolset/color"
+
+// Petite8Afterdark palette by Adigun A. Polack.
+var Petite8Afterdark = color.Palette{
+	color.RGB{R: 0x07, G: 0x08, B: 0x10},
+	color.RGB{R: 0x0d, G: 0x0f, B: 0x11},
+	color.RGB{R: 0x16, G: 0x1c, B: 0x20},
+	color.RGB{R: 0x27, G: 0x2b, B: 0x29},
+	color.RGB{R: 0x4b, G: 0x4a, B: 0x27},
+	color.RGB{R: 0x77, G: 0x61, B: 0x31},
+	color.RGB{R: 0xa0, G: 0x7c, B: 0x43},
+	color.RGB{R: 0xbb, G: 0x9a, B: 0x67},
+}
