@@ -1,5 +1,7 @@
 package color
 
+import "image/color"
+
 // Palette is a palette of colors.
 type Palette []Color
 
@@ -13,4 +15,13 @@ func (palette Palette) Contains(c Color) bool {
 		}
 	}
 	return false
+}
+
+// ToStdPalette converts a palette to a standard library (image/color) palette.
+func (palette Palette) ToStdPalette() color.Palette {
+	var result color.Palette
+	for _, c := range palette {
+		result = append(result, c)
+	}
+	return result
 }
