@@ -10,6 +10,9 @@ type HSV struct {
 	H, S, V float64
 }
 
+// RGBA returns the red, green, blue and alpha values for the color. Each value
+// ranges within [0, 0xffff], but is represented by a uint32 so that multiplying
+// by a blend factor up to 0xffff will not overflow.
 func (hsv HSV) RGBA() (r, g, b, a uint32) {
 	chroma := hsv.V * hsv.S
 

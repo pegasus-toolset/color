@@ -10,6 +10,9 @@ type RGB struct {
 	R, G, B uint8
 }
 
+// RGBA returns the red, green, blue and alpha values for the color. Each value
+// ranges within [0, 0xffff], but is represented by a uint32 so that multiplying
+// by a blend factor up to 0xffff will not overflow.
 func (rgb RGB) RGBA() (r, g, b, a uint32) {
 	r = uint32(rgb.R)
 	r |= r << 8
