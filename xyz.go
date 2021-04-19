@@ -10,6 +10,9 @@ type XYZ struct {
 	X, Y, Z float64
 }
 
+// RGBA returns the red, green, blue and alpha values for the color. Each value
+// ranges within [0, 0xffff], but is represented by a uint32 so that multiplying
+// by a blend factor up to 0xffff will not overflow.
 func (xyz XYZ) RGBA() (r, g, b, a uint32) {
 	rFloat := xyz.X*3.2406 + xyz.Y*-1.5372 + xyz.Z*-0.4986
 	gFloat := xyz.X*-0.9689 + xyz.Y*1.8758 + xyz.Z*0.0415

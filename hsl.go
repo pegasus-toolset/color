@@ -10,6 +10,9 @@ type HSL struct {
 	H, S, L float64
 }
 
+// RGBA returns the red, green, blue and alpha values for the color. Each value
+// ranges within [0, 0xffff], but is represented by a uint32 so that multiplying
+// by a blend factor up to 0xffff will not overflow.
 func (hsl HSL) RGBA() (r, g, b, a uint32) {
 	chroma := (1 - math.Abs(2*hsl.L-1)) * hsl.S
 
