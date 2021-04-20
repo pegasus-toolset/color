@@ -50,13 +50,8 @@ number):
 - `S`: Saturation
 - `L`: Lightness
 
-> In the HSL "bi-hexcone" model, _lightness_ is defined as the average of the
-> largest and smallest color components, i.e. the mid-range of the RGB
-> components. This definition also puts the primary and secondary colors into a
-> plane, but a plane passing halfway between white and black. The resulting
-> color solid is a double-cone similar to Ostwald's, shown above.
->
-> \- [Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness)
+See [Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness) for more
+information as to how this differs from HSV and HSI.
 
 ### HSV
 
@@ -67,12 +62,8 @@ number):
 - `S`: Saturation
 - `V`: Value
 
-> In the HSV "hexcone" model, _value_ is defined as the largest component of a
-> color, our _M_ above. This places all three primaries, and also all of the
-> "secondary colors"—cyan, yellow, and magenta—into a plane with white, forming
-> a hexagonal pyramid out of the RGB cube.
->
-> \- [Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness)
+See [Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness) for more
+information as to how this differs from HSL and HSI.
 
 ### HSI
 
@@ -83,16 +74,8 @@ number):
 - `S`: Saturation
 - `I`: Intensity
 
-#### Intensity
-
-> The simplest definition is just the arithmetic mean, i.e. average, of the
-> three components, in the HSI model called _intensity_. This is simply the
-> projection of a point onto the neutral axis—the vertical height of a point in
-> our tilted cube. The advantage is that, together with Euclidean-distance
-> calculations of hue and chroma, this representation preserves distances and
-> angles from the geometry of the RGB cube.
->
-> \- [Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness)
+See [Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness) for more
+information as to how this differs from HSL and HSV.
 
 ### XYZ
 
