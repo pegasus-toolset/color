@@ -1,8 +1,9 @@
 <h1 align="center">🎨 Color</h1>
 
 <p align="center">
-    <a href="https://travis-ci.com/pegasus-toolset/color"><img src="https://travis-ci.com/pegasus-toolset/color.svg?branch=main" /></a>
-    <a href="https://app.codecov.io/gh/pegasus-toolset/color"><img src="https://codecov.io/gh/pegasus-toolset/color/branch/main/graph/badge.svg?token=3R6863F2HA" /></a>
+    <a href="https://travis-ci.com/pegasus-toolset/color"><img src="https://travis-ci.com/pegasus-toolset/color.svg?branch=main" alt="Build Status" /></a>
+    <a href="https://app.codecov.io/gh/pegasus-toolset/color"><img src="https://codecov.io/gh/pegasus-toolset/color/branch/main/graph/badge.svg?token=3R6863F2HA" alt="Code Coverage" /></a>
+    <a href="https://pkg.go.dev/github.com/pegasus-toolset/color"><img src="https://pkg.go.dev/badge/github.com/pegasus-toolset/color.svg" alt="Go Reference" /></a>
 </p>
 
 **Color** is an extension of the standard library package
