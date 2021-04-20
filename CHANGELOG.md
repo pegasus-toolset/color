@@ -12,6 +12,14 @@ and this project adheres to
 
 - Changelog was added.
 
+### Changed
+
+- Wikipedia quotes in README were removed in favor of a link and a short
+  explanation as to what information can be found in the article.
+
+- The subtitle **Intensity** was removed from the README to match the other
+  color model explanations.
+
 ## [0.1.0] - 2021-04-20
 
 - Initial release.
