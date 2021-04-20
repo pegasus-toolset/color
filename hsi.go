@@ -48,11 +48,13 @@ func (hsi HSI) RGBA() (r, g, b, a uint32) {
 	return uint32((rFloat + m) * 0xffff), uint32((gFloat + m) * 0xffff), uint32((bFloat + m) * 0xffff), 0xffff
 }
 
+// DistanceTo calculates the distance to another color in the HSI color space.
 func (hsi HSI) DistanceTo(c color.Color) float64 {
 	other := HSIModel.Convert(c).(HSI)
 	return math.Sqrt(math.Pow(other.H/360-hsi.H/360, 2) + math.Pow(other.S-hsi.S, 2) + math.Pow(other.I-hsi.I, 2))
 }
 
+// HSIModel can convert any color to a HSI color.
 var HSIModel color.Model = color.ModelFunc(hsiModel)
 
 func hsiModel(c color.Color) color.Color {
