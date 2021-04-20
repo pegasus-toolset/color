@@ -17,11 +17,13 @@ func (rgb48 RGB48) RGBA() (r, g, b, a uint32) {
 	return uint32(rgb48.R), uint32(rgb48.G), uint32(rgb48.B), 0xffff
 }
 
+// DistanceTo calculates the distance to another color in the sRGB color space.
 func (rgb48 RGB48) DistanceTo(c color.Color) float64 {
 	other := RGB48Model.Convert(c).(RGB48)
 	return math.Sqrt(math.Pow(float64(other.R)-float64(rgb48.R), 2) + math.Pow(float64(other.G)-float64(rgb48.G), 2) + math.Pow(float64(other.B)-float64(rgb48.B), 2))
 }
 
+// RGB48Model can convert any color to a sRGB color.
 var RGB48Model color.Model = color.ModelFunc(rgb48Model)
 
 func rgb48Model(c color.Color) color.Color {

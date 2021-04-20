@@ -49,11 +49,13 @@ func (xyz XYZ) RGBA() (r, g, b, a uint32) {
 	return uint32(rFloat * 0xffff), uint32(gFloat * 0xffff), uint32(bFloat * 0xffff), 0xffff
 }
 
+// DistanceTo calculates the distance to another color in the XYZ color space.
 func (xyz XYZ) DistanceTo(c color.Color) float64 {
 	other := XYZModel.Convert(c).(XYZ)
 	return math.Sqrt(math.Pow(other.X-xyz.X, 2) + math.Pow(other.Y-xyz.Y, 2) + math.Pow(other.Z-xyz.Z, 2))
 }
 
+// XYZModel can convert any color to a XYZ color.
 var XYZModel color.Model = color.ModelFunc(xyzModel)
 
 func xyzModel(c color.Color) color.Color {
