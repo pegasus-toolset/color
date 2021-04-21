@@ -42,6 +42,9 @@ func (lab Lab) RGBA() (r, g, b, a uint32) {
 
 // DistanceTo calculates the distance to another color in the L*a*b* color
 // space.
+//
+// Before calculating the distance, the other color is converted into a L*a*b*
+// color.
 func (lab Lab) DistanceTo(c color.Color) float64 {
 	other := LabModel.Convert(c).(Lab)
 	return math.Sqrt(math.Pow(other.L-lab.L, 2) + math.Pow(other.A-lab.A, 2) + math.Pow(other.B-lab.B, 2))

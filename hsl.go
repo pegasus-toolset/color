@@ -49,6 +49,9 @@ func (hsl HSL) RGBA() (r, g, b, a uint32) {
 }
 
 // DistanceTo calculates the distance to another color in the HSL color space.
+//
+// Before calculating the distance, the other color is converted into a HSL
+// color.
 func (hsl HSL) DistanceTo(c color.Color) float64 {
 	other := HSLModel.Convert(c).(HSL)
 	return math.Sqrt(math.Pow(other.H/360-hsl.H/360, 2) + math.Pow(other.S-hsl.S, 2) + math.Pow(other.L-hsl.L, 2))

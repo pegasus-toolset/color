@@ -49,6 +49,9 @@ func (hsv HSV) RGBA() (r, g, b, a uint32) {
 }
 
 // DistanceTo calculates the distance to another color in the HSV color space.
+//
+// Before calculating the distance, the other color is converted into a HSV
+// color.
 func (hsv HSV) DistanceTo(c color.Color) float64 {
 	other := HSVModel.Convert(c).(HSV)
 	return math.Sqrt(math.Pow(other.H/360-hsv.H/360, 2) + math.Pow(other.S-hsv.S, 2) + math.Pow(other.V-hsv.V, 2))
