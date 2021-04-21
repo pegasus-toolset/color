@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [0.1.1] - 2021-04-21
+
 ### Added
 
 - `palette.FromImage` was added.
@@ -36,4 +38,5 @@ and this project adheres to
 - Initial release.
 
 [Unreleased]: https://github.com/pegasus-toolset/color
+[0.1.1]: https://github.com/pegasus-toolset/color/releases/tag/v0.1.1
 [0.1.0]: https://github.com/pegasus-toolset/color/releases/tag/v0.1.0
