@@ -129,6 +129,8 @@ components (each a 64-bit floating-point number):
   - ENOS16 (`palette.ENOS16`)
   - hept32 (`palette.Hept32`)
   - SUPERFUTURE25 (`palette.SUPERFUTURE25`)
+- Palettes by Gabriel C.:
+  - Fantasy 24 (`palette.Fantasy24`)
 - Palettes by Kerrie Lake:
   - Coldfire GB (`palette.ColdfireGB`)
   - Earth GB (`palette.EarthGB`)
