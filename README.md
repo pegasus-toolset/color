@@ -143,6 +143,8 @@ components (each a 64-bit floating-point number):
   - Resurrect 64 (`palette.Resurrect64`)
   - Rustic GB (`palette.RusticGB`)
   - Wish GB (`palette.WishGB`)
+- Palettes by Kirokaze:
+  - Kirokaze Gameboy (`palette.KirokazeGameboy`)
 - Palettes by Nauris:
   - NA16 (`palette.NA16`)
 - Palettes by PineappleOnPizza:
@@ -153,6 +155,8 @@ components (each a 64-bit floating-point number):
   - Pineapple 32 (`palette.Pineapple32`)
   - Rosy 42 (`palette.Rosy42`)
   - Taffy 16 (`palette.Taffy16`)
+- Palettes by Slynyrd:
+  - Steam Lords (`palette.SteamLords`)
 - Palettes by Vinik:
   - Vinik24 (`palette.Vinik24`)
 

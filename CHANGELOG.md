@@ -12,7 +12,9 @@ and this project adheres to
 
 - Changelog was added.
 - Fantasy 24 palette by Gabriel C. was added.
+- Kirokaze Gameboy palette by Kirokaze was added.
 - NA16 palette by Nauris was added.
+- Steam Lords palette by Slynyrd was added.
 - Vinik24 palette by Vinik was added.
 
 ### Changed
