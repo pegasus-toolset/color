@@ -164,3 +164,4 @@ components (each a 64-bit floating-point number):
 
 - Conversion between color models/spaces
 - Distance calculations between colors in all color models/spaces
+- Palette creation from image

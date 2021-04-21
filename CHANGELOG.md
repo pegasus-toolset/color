@@ -10,6 +10,7 @@ and this project adheres to
 
 ### Added
 
+- `palette.FromImage` was added.
 - Changelog was added.
 - Fantasy 24 palette by Gabriel C. was added.
 - Kirokaze Gameboy palette by Kirokaze was added.
