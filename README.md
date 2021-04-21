@@ -143,6 +143,8 @@ components (each a 64-bit floating-point number):
   - Resurrect 64 (`palette.Resurrect64`)
   - Rustic GB (`palette.RusticGB`)
   - Wish GB (`palette.WishGB`)
+- Palettes by Nauris:
+  - NA16 (`palette.NA16`)
 - Palettes by PineappleOnPizza:
   - Bubblegum 16 (`palette.Bubblegum16`)
   - Cave (`palette.Cave`)

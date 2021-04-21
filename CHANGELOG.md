@@ -12,6 +12,7 @@ and this project adheres to
 
 - Changelog was added.
 - Fantasy 24 palette by Gabriel C. was added.
+- NA16 palette by Nauris was added.
 - Vinik24 palette by Vinik was added.
 
 ### Changed
