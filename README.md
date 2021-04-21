@@ -149,6 +149,8 @@ components (each a 64-bit floating-point number):
   - Pineapple 32 (`palette.Pineapple32`)
   - Rosy 42 (`palette.Rosy42`)
   - Taffy 16 (`palette.Taffy16`)
+- Palettes by Vinik:
+  - Vinik24 (`palette.Vinik24`)
 
 ## Additional Features
 
