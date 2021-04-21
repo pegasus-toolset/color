@@ -11,12 +11,17 @@ and this project adheres to
 ### Added
 
 - Changelog was added.
+- Fantasy 24 palette by Gabriel C. was added.
+- Kirokaze Gameboy palette by Kirokaze was added.
+- NA16 palette by Nauris was added.
+- Steam Lords palette by Slynyrd was added.
+- Vinik24 palette by Vinik was added.
 
 ### Changed
 
+- Documentation for `DistanceTo` was improved.
 - Wikipedia quotes in README were removed in favor of a link and a short
   explanation as to what information can be found in the article.
-
 - The subtitle **Intensity** was removed from the README to match the other
   color model explanations.
 

@@ -49,6 +49,9 @@ func (hsi HSI) RGBA() (r, g, b, a uint32) {
 }
 
 // DistanceTo calculates the distance to another color in the HSI color space.
+//
+// Before calculating the distance, the other color is converted into a HSI
+// color.
 func (hsi HSI) DistanceTo(c color.Color) float64 {
 	other := HSIModel.Convert(c).(HSI)
 	return math.Sqrt(math.Pow(other.H/360-hsi.H/360, 2) + math.Pow(other.S-hsi.S, 2) + math.Pow(other.I-hsi.I, 2))

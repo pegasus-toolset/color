@@ -129,6 +129,8 @@ components (each a 64-bit floating-point number):
   - ENOS16 (`palette.ENOS16`)
   - hept32 (`palette.Hept32`)
   - SUPERFUTURE25 (`palette.SUPERFUTURE25`)
+- Palettes by Gabriel C.:
+  - Fantasy 24 (`palette.Fantasy24`)
 - Palettes by Kerrie Lake:
   - Coldfire GB (`palette.ColdfireGB`)
   - Earth GB (`palette.EarthGB`)
@@ -141,6 +143,10 @@ components (each a 64-bit floating-point number):
   - Resurrect 64 (`palette.Resurrect64`)
   - Rustic GB (`palette.RusticGB`)
   - Wish GB (`palette.WishGB`)
+- Palettes by Kirokaze:
+  - Kirokaze Gameboy (`palette.KirokazeGameboy`)
+- Palettes by Nauris:
+  - NA16 (`palette.NA16`)
 - Palettes by PineappleOnPizza:
   - Bubblegum 16 (`palette.Bubblegum16`)
   - Cave (`palette.Cave`)
@@ -149,6 +155,10 @@ components (each a 64-bit floating-point number):
   - Pineapple 32 (`palette.Pineapple32`)
   - Rosy 42 (`palette.Rosy42`)
   - Taffy 16 (`palette.Taffy16`)
+- Palettes by Slynyrd:
+  - Steam Lords (`palette.SteamLords`)
+- Palettes by Vinik:
+  - Vinik24 (`palette.Vinik24`)
 
 ## Additional Features
 
