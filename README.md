@@ -105,6 +105,8 @@ components (each a 64-bit floating-point number):
 - Bluecurve icon palette (`palette.Bluecurve`)
 - Eclipse-style palette (`palette.Eclipse`)
 - Tango Desktop Project palette (`palette.Tango`)
+- Palettes by Adam C. Younis:
+  - Apollo (`palette.Apollo`)
 - Palettes by Adigun A. Polack:
   - AAP-16 (`palette.AAP16`)
   - AAP-64 (`palette.AAP64`)
@@ -115,6 +117,12 @@ components (each a 64-bit floating-point number):
   - Petite-8 (`palette.Petite8`)
   - Petite-8 Afterdark (`palette.Petite8Afterdark`)
   - SimpleJPC-16 (`palette.SimpleJPC16`)
+- Palettes by BlackedIRL:
+  - BLK 36 (`palette.BLK36`)
+  - BLK AQU4 (`palette.BLKAQU4`)
+  - NOPAL-12 (`palette.NOPAL12`)
+- Palettes by Conker:
+  - Pollen8 (`palette.Pollen8`)
 - Palettes by ENDESGA:
   - ARQ4 (`palette.ARQ4`)
   - ARQ16 (`palette.ARQ16`)
