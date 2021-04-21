@@ -10,10 +10,16 @@ and this project adheres to
 
 ### Added
 
+- `palette.FromImage` was added.
 - Changelog was added.
+- Apollo palette by Adam C. Younis was added.
+- BLK 36 palette by BlackedIRL was added.
+- BLK AQU4 palette by BlackedIRL was added.
 - Fantasy 24 palette by Gabriel C. was added.
 - Kirokaze Gameboy palette by Kirokaze was added.
 - NA16 palette by Nauris was added.
+- NOPAL-12 palette by BlackedIRL was added.
+- Pollen8 palette by Conker was added.
 - Steam Lords palette by Slynyrd was added.
 - Vinik24 palette by Vinik was added.
 
