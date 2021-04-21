@@ -19,9 +19,9 @@ and this project adheres to
 
 ### Changed
 
+- Documentation for `DistanceTo` was improved.
 - Wikipedia quotes in README were removed in favor of a link and a short
   explanation as to what information can be found in the article.
-
 - The subtitle **Intensity** was removed from the README to match the other
   color model explanations.
 
