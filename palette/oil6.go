@@ -1,0 +1,13 @@
+package palette
+
+import "github.com/pegasus-toolset/color"
+
+// Oil6 palette by GrafxKid.
+var Oil6 = color.Palette{
+	color.RGB{R: 0xFB, G: 0xF5, B: 0xEF},
+	color.RGB{R: 0xF2, G: 0xD3, B: 0xAB},
+	color.RGB{R: 0xC6, G: 0x9F, B: 0xA5},
+	color.RGB{R: 0x8B, G: 0x6D, B: 0x9C},
+	color.RGB{R: 0x49, G: 0x4D, B: 0x7E},
+	color.RGB{R: 0x27, G: 0x27, B: 0x44},
+}
