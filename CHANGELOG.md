@@ -8,6 +8,33 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [0.1.2] - 2023-05-11
+
+### Added
+
+- Aurora palette by DawnBringer was added.
+- Blessing palette by まるき was added.
+- BLK NEO palette by BlackedIRL was added.
+- Borkfest palette by まるき was added.
+- CC-29 palette by Alpha6 was added.
+- CHOCOMILK-8 palette by Blylzz was added.
+- DawnBringer 32 palette by DawnBringer was added.
+- duel palette by Arilyn was added.
+- Famicube palette by Arne was added.
+- Lospec500 palette by the Lospec Discord was added.
+- Lux2K palette by lux was added.
+- Nintendo Entertainment System palette was added.
+- Nyx8 palette by Javier Guerrero was added.
+- Oil 6 palette by GrafxKid was added.
+- 👌31 palette by mattt was added.
+- 1bit Monitor Glow palette by Polyducks was added.
+- PICO-8 palette was added.
+- SLSO8 palette by Luis Miguel Maldonado was added.
+- Sweetie 16 palette by GrafxKid was added.
+- Twilight 5 palette by Star was added.
+- Vine's Flexible Linear Ramps palette by Vine 2D was added.
+- Zughy 32 palette by Zughy was added.
+
 ## [0.1.1] - 2021-04-21
 
 ### Added
@@ -38,5 +65,6 @@ and this project adheres to
 - Initial release.
 
 [Unreleased]: https://github.com/pegasus-toolset/color
+[0.1.2]: https://github.com/pegasus-toolset/color/releases/tag/v0.1.2
 [0.1.1]: https://github.com/pegasus-toolset/color/releases/tag/v0.1.1
 [0.1.0]: https://github.com/pegasus-toolset/color/releases/tag/v0.1.0
